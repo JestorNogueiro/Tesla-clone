@@ -17,7 +17,6 @@ const Footer = () => {
             href="https://www.instagram.com/jestor_nogueiro/"
             target="_blank"
           >
-            {" "}
             <FaInstagram />
           </Instagram>
 
@@ -25,7 +24,6 @@ const Footer = () => {
             href="https://www.linkedin.com/in/jestor-nogueiro-02467b184/"
             target="_blank"
           >
-            {" "}
             <FaLinkedin />
           </LinkedIn>
           <GitHub href="https://github.com/JestorNogueiro" target="_blank">
@@ -45,15 +43,11 @@ align-items:center;
 justify-content:center;
 bottom:0;
 padding:0 2rem;
-/* margin-top:100px; */
-  /* z-index: 100; */
+
 height:10vh;
 width:100%;
-
 background-color:#171717;
-
-
-  color:white;
+color:white;
 
 `;
 
