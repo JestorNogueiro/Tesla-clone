@@ -47,7 +47,7 @@ bottom:0;
 padding:0 2rem;
 /* margin-top:100px; */
   /* z-index: 100; */
-height:20vh;
+height:10vh;
 width:100%;
 
 background-color:#171717;
