@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <Container>
       <Section
-        title="Model-S"
+        title="Model S"
         disc="Order Online For Touchless Delivery"
         bgImage="model-s.jpg"
         leftButton="Custom Order"
@@ -19,13 +19,6 @@ const Home = () => {
         rightButton="Existing Inventory"
       />
       <Section
-        title="Model X"
-        disc="Order Online For Touchless Delivery"
-        bgImage="model-x.jpg"
-        leftButton="Custom Order"
-        rightButton="Existing Inventory"
-      />
-      <Section
         title="Model 3"
         disc="Order Online For Touchless Delivery"
         bgImage="model-3.jpg"
@@ -33,18 +26,26 @@ const Home = () => {
         rightButton="Existing Inventory"
       />
       <Section
-        title="Solar panel"
-        disc="Money back guarantee"
-        bgImage="solar-panel.jpg"
+        title="Model X"
+        disc="Order Online For Touchless Delivery"
+        bgImage="model-x.jpg"
         leftButton="Custom Order"
         rightButton="Existing Inventory"
       />
+
       <Section
-        title="Solar Roof"
+        title="Lowest Cost Solar panel"
+        disc="Money-back guarantee"
+        bgImage="solar-panel.jpg"
+        leftButton="Order Now"
+        rightButton="Learn More"
+      />
+      <Section
+        title="Solar For New Roofs"
         disc="Solar Roof Costs Less than a New Roof Plus Solar Panels"
         bgImage="solar-roof.jpg"
-        leftButton="Custom Order"
-        rightButton="Existing Inventory"
+        leftButton="Order Now"
+        rightButton="Learn More"
       />
       <Section
         title="Accessories"

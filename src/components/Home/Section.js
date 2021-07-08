@@ -1,6 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 import Fade from "react-reveal";
+import Zoom from "react-reveal";
 const Section = ({ title, disc, bgImage, leftButton, rightButton }) => {
   return (
     <Wrap image={bgImage}>
@@ -11,13 +12,13 @@ const Section = ({ title, disc, bgImage, leftButton, rightButton }) => {
         </SectionText>
       </Fade>
       <Buttons>
-        <Fade bottom>
+        <Zoom center>
           <SectionButtons>
             <LeftButton>{leftButton}</LeftButton>
             {rightButton && <RightButton>{rightButton}</RightButton>}
           </SectionButtons>
           <ArrowButton src="/images/down-arrow.svg" />
-        </Fade>
+        </Zoom>
       </Buttons>
     </Wrap>
   );
@@ -43,6 +44,7 @@ justify-content:space-between;
 const SectionText = Styled.div`
  padding-top: 15vh;
  text-align:center;
+ font-size:15px;
  p{
    display:flex;
    flex-wrap:wrap;

@@ -4,8 +4,13 @@ import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import Fade from "react-reveal";
 import { PinDropSharp } from "@material-ui/icons";
+// import selectCars from "../Features/CarSlice";
+// import { useSelector } from "react-redux";
 const Header = () => {
   const [closeOpen, setCloseOpen] = useState(false);
+
+  // const cars = useSelector(selectCars);
+
   const handleMenu = () => {
     setCloseOpen(true);
   };
@@ -15,12 +20,18 @@ const Header = () => {
   return (
     <Container>
       <a>
-        <Fade left>
+        <Fade center>
           <img src="/images/logo.svg" />
         </Fade>
       </a>
 
       <Menu>
+        {/* {cars &&
+          cars.map((car, index) => (
+            <a key={index} href="#">
+              {car}
+            </a>
+          ))} */}
         <a href="#">Model S</a>
         <a href="#">Model X</a>
         <a href="#">Model Y</a>
@@ -31,6 +42,8 @@ const Header = () => {
         <a href="#">Tesla Account</a>
         <CustomMenu onClick={handleMenu} />
       </RightMenu>
+
+      {/* *******SideBar****** */}
       <BurgerMenu show={closeOpen}>
         <CloseWrapper>
           <CustomeClose onClick={handleClose} />
