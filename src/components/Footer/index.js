@@ -5,8 +5,14 @@ const Footer = () => {
   return (
     <Container>
       <Wrapper>
-        @Jestor Nogueiro
+        <Names>
+          <h6>Developed By</h6>
+          @Jestor Nogueiro
+        </Names>
         <SocialMedia>
+          <Names>
+            <h6>Contact Me:</h6>
+          </Names>
           <Facebook
             href="https://www.facebook.com/jestor.nogueiro/"
             target="_blank"
@@ -44,7 +50,7 @@ justify-content:center;
 bottom:0;
 padding:0 2rem;
 
-height:10vh;
+height:14vh;
 width:100%;
 background-color:#171717;
 color:white;
@@ -54,33 +60,44 @@ color:white;
 const Wrapper = Styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  /* justify-content: ; */
+  /* padding:2px 15px; */
+`;
+const Names = Styled.div`
+margin-left:15px;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: flex-end; */
+  h6{
+    font-size:10px;
+    color:grey;
+  }
 `;
 const SocialMedia = Styled.div`
-  display: flex;
-  align-items: end;
+  /* display: flex; */
+  /* flex-direction:column; */
+  align-items: center;
+  margin-left:8px;
+
 `;
 const GitHub = Styled.a`
   margin-left: 10px;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
+  transition: transform 420ms ease-in;
+  &:hover{
+    color:grey;
+    transform: scale(1);
+  }
 `;
-const Facebook = Styled.a`
-  margin-left: 10px;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
+const Facebook = Styled(GitHub)`
+
 `;
-const Instagram = Styled.a`
-  margin-left: 10px;
-  cursor: pointer;
-  color: white;
-  font-size: 1.5rem;
+const Instagram = Styled(Facebook)`
+
 `;
-const LinkedIn = Styled.a`
-  margin-left: 10px;
-  cursor: pointer;
-  color: white;
-  font-size: 1.5rem;
+const LinkedIn = Styled(Instagram)`
+  
 `;
