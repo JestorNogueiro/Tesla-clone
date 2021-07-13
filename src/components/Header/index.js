@@ -3,8 +3,7 @@ import Styled from "styled-components";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import Fade from "react-reveal";
-import { PinDropSharp } from "@material-ui/icons";
-// import selectCars from "../Features/CarSlice";
+
 // import { useSelector } from "react-redux";
 const Header = () => {
   const [closeOpen, setCloseOpen] = useState(false);
@@ -19,27 +18,19 @@ const Header = () => {
   };
   return (
     <Container>
-      <a>
-        <Fade center>
-          <img src="/images/logo.svg" />
-        </Fade>
-      </a>
+      <Fade center>
+        <img src="/images/logo.svg" alt="Tesla Logo" />
+      </Fade>
 
       <Menu>
-        {/* {cars &&
-          cars.map((car, index) => (
-            <a key={index} href="#">
-              {car}
-            </a>
-          ))} */}
-        <a href="#">Model S</a>
-        <a href="#">Model X</a>
-        <a href="#">Model Y</a>
-        <a href="#">Model 3</a>
+        <li>Model S</li>
+        <li>Model X</li>
+        <li>Model Y</li>
+        <li>Model 3</li>
       </Menu>
       <RightMenu>
-        <a href="#">Shop</a>
-        <a href="#">Tesla Account</a>
+        <li href="#">Shop</li>
+        <li href="#">Tesla Account</li>
         <CustomMenu onClick={handleMenu} />
       </RightMenu>
 
@@ -48,30 +39,14 @@ const Header = () => {
         <CloseWrapper>
           <CustomeClose onClick={handleClose} />
         </CloseWrapper>
-        <li>
-          <a>Existing Inventory</a>
-        </li>
-        <li>
-          <a>Used Inventory</a>
-        </li>
-        <li>
-          <a>Trade-in</a>
-        </li>
-        <li>
-          <a>CyberTruck</a>
-        </li>
-        <li>
-          <a>Charging</a>
-        </li>
-        <li>
-          <a>Test-Drive</a>
-        </li>
-        <li>
-          <a>Utillities</a>
-        </li>
-        <li>
-          <a>Roadstar</a>
-        </li>
+        <li>Existing Inventory</li>
+        <li>Used Inventory</li>
+        <li>Trade-in</li>
+        <li>CyberTruck</li>
+        <li>Charging</li>
+        <li>Test-Drive</li>
+        <li>Utillities</li>
+        <li>Roadstar</li>
       </BurgerMenu>
     </Container>
   );
@@ -98,12 +73,17 @@ const Menu = Styled.div`
 display:flex;
 align-items: center;
 
-a{
+li{
+  cursor:pointer;
   text-decoration:none;
+  list-style:none;
   text-transform:uppercase;
   font-weight:600;
   color:black;
  margin-left:15px;
+ &:hover{
+      font-weight:700;
+    }
 }
 @media(max-width:768px){
   display:none;
@@ -112,12 +92,18 @@ a{
 const RightMenu = Styled.div`
 display:flex;
 align-items: center;
-a{
+
+li{
+  cursor:pointer;
   text-decoration:none;
+  list-style:none;
   text-transform:uppercase;
   font-weight:600;
   color:black;
  margin-right:8px;
+ &:hover{
+      font-weight:650;
+    }
 }`;
 
 const CustomMenu = Styled(MenuIcon)`
